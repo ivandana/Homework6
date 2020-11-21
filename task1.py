@@ -13,7 +13,14 @@ from collections import Counter
 import nltk
 # nltk is a very large package, pip3 does not download entire package at once to 
 # preserve space so manual download is required.
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
 nltk.download('punkt')
+
 from nltk import sent_tokenize, word_tokenize
 import string
 import sys
