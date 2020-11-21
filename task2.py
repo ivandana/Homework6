@@ -10,7 +10,7 @@ with input_file:
     
 char_dict = {}
 for character in data:
-    if character.isalpha():
+    if character.isalpha(): # Only consider alphabets, ignore other characters.
         char_dict[character] = data.count(character)
   
 output_file = open(OUTPUT_FILE, WRITE_MODE)
