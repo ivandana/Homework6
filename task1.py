@@ -49,7 +49,7 @@ with open(OUTPUT_FILE, WRITE_MODE) as output_file:
     english_words = []
     for word in total_words:  # Removing the punctuations from the word list to only have english words.
         if word not in string.punctuation:
-            english_words.append(word)
+            english_words.append(word.capitalize())
     output_file.write(f"Total word count: {len(english_words)} \n")
 
     #Character count would also include punctuations.
