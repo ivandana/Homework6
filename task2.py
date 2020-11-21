@@ -1,3 +1,11 @@
+
+"""
+Please use dictionary to keep the count of each letter. Read a text file named “book.txt” that may have multiple lines. 
+Then create a “summary.txt” file that has the frequency of each letter, case-insensitive, i.e., “a” and “A” are the same letter. 
+Each line has a record of the letter and frequency. The last line should be a summary to tell if the file has all 26 letters. 
+"""
+
+
 INPUT_FILE = "book.txt"
 OUTPUT_FILE = "summary.txt"
 READ_MODE = 'r'
