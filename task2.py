@@ -24,7 +24,7 @@ for character in data:
 output_file = open(OUTPUT_FILE, WRITE_MODE)
 with output_file:
     for letters in sorted(char_dict.keys()):  # Sorting letters.
-        output_file.write(f'{letters}: {char_dict[letters]}\n')
+        output_file.write(f'{letters} {char_dict[letters]}\n')
 
     if len(char_dict) == ENGLISH_ALPHABET_COUNT:
          output_file.write("\nIt has all letters.")
