@@ -11,6 +11,7 @@
 
 from collections import Counter
 import nltk
+import ssl
 # nltk is a very large package, pip3 does not download entire package at once to 
 # preserve space so manual download is required.
 try:
