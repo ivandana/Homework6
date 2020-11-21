@@ -10,10 +10,13 @@
 """
 
 from collections import Counter
-import nltk
-import ssl
+
 # nltk is a very large package, pip3 does not download entire package at once to 
 # preserve space so manual download is required.
+# There is a bug in downloader in python 3.8 in SSL connection, the below is a wordaround per
+# https://stackoverflow.com/questions/38916452/nltk-download-ssl-certificate-verify-failed
+import nltk
+import ssl
 try:
     _create_unverified_https_context = ssl._create_unverified_context
 except AttributeError:
