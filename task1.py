@@ -63,9 +63,9 @@ with open(OUTPUT_FILE, WRITE_MODE) as output_file:
     output_file.write(f"The average sentence length: {round(total_sentence_length/len(sentences))}\n\n")
     word_freq_dict = Counter(english_words) # Returns a dictionary of list of unique words and their frequency.
     output_file.write(f"A word distribution of all words ending in “ly”:\n")
-    for word, frequency in word_freq_dict.items():
+    for word in sorted(word_freq_dict.keys()):
         if word.endswith("ly"):
-            output_file.write(f"{word}: {frequency}\n")
+            output_file.write(f"{word}: {word_freq_dict[word]}\n")
     output_file.write("\n")
 
     #Sorting the words in descending order with key as length.
